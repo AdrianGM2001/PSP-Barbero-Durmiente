@@ -4,9 +4,12 @@ public class Barberia {
     private int numeroSillasLibres;
     private int numeroSillasOcupadas;
    
-    public void sentar(){
-        
+    public void sentar(String nameCliente){
+        if (!ocupado) {
+            cortar(nameCliente);
+        }
     }
+    public synchronized void cortar(String nCliente){}
 
     public boolean isOcupado() {
         return ocupado;
